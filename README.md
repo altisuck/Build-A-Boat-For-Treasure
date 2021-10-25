@@ -1,1 +1,59 @@
-# Build-A-Boat-For-Treasure
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("NOOB HUB Build A Boat For Treasure", "DarkTheme")
+local DarkTheme = {
+    Background = Color3.fromRGB(0, 0, 0),
+    TextColor = Color3.fromRGB(255,255,255),
+}
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Credit : 03s.#4358")
+local Section = Tab:NewSection("Discord : https://discord.gg/dY8rpSktyn")
+Section:NewButton("Copy Discrod Server", "", function()
+setclipboard("https://discord.gg/dY8rpSktyn")
+end)
+local Tab = Window:NewTab("Auto")
+local Section = Tab:NewSection("Auto")
+Section:NewToggle("Auto Fram Money", "Click to frame", function(state)
+    _G.fram = state;
+    while _G.fram  do wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 1369.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 2139.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 2909.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 3679.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 4449.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 5219.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 5989.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 6759.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 7529.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(.5)
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-56.22220993042, -362.45690917969, 9483.5810546875)
+        wait(.5)
+end
+end)
+Section:NewToggle("Auto Fram Gold", "Click to frame", function(state)
+_G.gold = state;
+while _G.gold  do wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 2139.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-56.22220993042, -362.45690917969, 9483.5810546875)
+wait(1.5)
+end
+end)
+local Tab = Window:NewTab("Setting")
+local Section = Tab:NewSection("Keybund")
+Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
+local Section = Tab:NewSection("Theme")
+for theme, color in pairs(DarkTheme) do
+    Section:NewColorPicker(theme, "DarkTheme"..theme, color, function(color3)
+        Library:ChangeColor(theme, color3)
+    end)
+end
